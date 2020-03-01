@@ -11,6 +11,7 @@
                 <div class="col-sm-12 col-xs-12 col-md-6">
                     <label for="temp">Temperature</label>
                     <input type="text" value="<?php if (isset($_POST['originaltemp'])) echo $_POST['originaltemp'];?>" name="originaltemp" size="7" maxlength="7" id="temp" class="form-control">
+                    <label for="originalunit">Original Unit</label>
                     <select name="originalunit" class="form-control selectpicker">
                         <option value="--Select--" <?php if($originalUnit == "--Select--") echo ' selected="selected"';?>>--Select--</option>
                         <option value="celsius" <?php if($originalUnit == "celsius") echo ' selected="selected"';?>>Celsius</option>
@@ -21,7 +22,7 @@
                 <div class="section col-xs-12 col-sm-12 col-md-6">
                     <label for="convertedtemp">Converted Temperature</label>
                     <input type="text" value="<?php if (isset($_POST['originaltemp'])) echo round($convertedTemp, 1);?>" name="convertedtemp" size="7" maxlength="7" id="convertedtemp" class="form-control">
-
+                    <label for="conversionunit">Converted Unit</label>
                     <select name="conversionunit" class="form-control">
                         <option value="--Select--" <?php if($conversionUnit == "--Select--") echo ' selected="selected"';?>>--Select--</option>
                         <option value="celsius" <?php if($conversionUnit == "celsius") echo ' selected="selected"';?>>Celsius</option>
